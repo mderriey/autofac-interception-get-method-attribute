@@ -13,6 +13,10 @@ namespace AutofacInterceptionWithCache
             {
                 Trace.WriteLine($"Found a [Cache] attribute on the {invocation.Method.Name} method with a duration of {cacheAttribute.Duration}.");
             }
+            else
+            {
+                Trace.WriteLine($"Couldn't find a [Cache] attribute on the {invocation.Method.Name} method.");
+            }
 
             invocation.Proceed();
         }

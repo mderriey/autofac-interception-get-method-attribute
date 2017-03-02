@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace AutofacInterceptionWithCache
+﻿namespace AutofacInterceptionWithCache
 {
     public interface IMyQuery
     {
-        [Cache(60000)]
         string GetName();
     }
 }
